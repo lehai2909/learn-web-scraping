@@ -87,3 +87,27 @@ def getLinks(pageUrl):
                 pages.add(newPage)
                 getLinks(newPage)
 getLinks('')
+
+
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import re
+
+html = urlopen("https://en.wikipedia.org/wiki/Nuclear_reaction")
+bs = BeautifulSoup(html, 'html.parser')
+print("Title: ", bs.h1.get_text())
+print("-"*20)
+print("Content: ")
+print(bs.p.contents)
+#get_page_info("https://en.wikipedia.org/wiki/Nuclear_reaction")
+
+
+try:  
+    if bs.find('p').attrs['class']:
+        intro = bs.find('p').find_next('p')
+except KeyError:
+    intro = bs.find('p')
+while (intro != '\n'):
+    print(intro.get_text())
+    intro = intro.next_sibling
