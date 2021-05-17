@@ -208,5 +208,6 @@ img.show()
 import requests
 image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Li6-D_Reaction.svg/600px-Li6-D_Reaction.svg.png'
 img_data = requests.get(image_url).content
-with open('image_name.png', 'wb') as handler:
+print(type(img_data))
+with open('images\image.png', 'wb') as handler:
     handler.write(img_data)
