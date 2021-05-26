@@ -1,7 +1,7 @@
 ## Welcome to my Github.io
 This is repository for learning to scrapping web data from Wikipedia.
 
-Why I created this project: As the first step, I want to scrape data and handle them myself. So I choosed Wikipedia, with the support from **BeautifulSoup** library (Python). I also take advantage of **Streamlit** library to build a tiny app.
+The reason I created this project: As the first step, I want to scrape data and handle them myself. So I choosed Wikipedia, with the support from **BeautifulSoup** library (Python). I also use **Streamlit** library to build a tiny app.
 
 I know it seems complex doing web scraping manually while Wiki has bunch of convenient APIs for this, but I want to start simply and stupidly :grin:.
 
